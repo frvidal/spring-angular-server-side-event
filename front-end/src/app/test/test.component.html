@@ -1,0 +1,10 @@
+<div>
+<p>{{ping$|async}}</p>
+<br/>
+
+{{event$}}
+<div *ngIf="(event$ | async); let evt; else loading">
+    <div>ID: {{evt}} </div>
+</div>
+<br/>
+<ng-template #loading>Waiting...</ng-template>
